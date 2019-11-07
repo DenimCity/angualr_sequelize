@@ -3,24 +3,20 @@ import { User } from '../../shared/interfaces/user';
 import { UserService } from '../user.service';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+	selector: 'app-users',
+	templateUrl: './users.component.html',
+	styleUrls: [ './users.component.css' ]
 })
 export class UsersComponent implements OnInit {
-  users: User[];
+	users: User[];
 
-  constructor(private userService: UserService) { }
+	constructor(private userService: UserService) {}
 
-  ngOnInit() {
-    // this.allUsers();
-  }
+	ngOnInit() {
+		this.allUsers();
+	}
 
-  allUsers() {
-    this.userService.getUsers()
-      .subscribe(
-        (users: User[]) => this.users = users
-      );
-  }
-
+	allUsers() {
+		this.userService.getUsers().subscribe((users: User[]) => (this.users = users));
+	}
 }
