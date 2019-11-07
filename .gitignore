@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+
+# Lock Files
+yarn.lock
+
 # compiled output
 /dist
 /tmp
