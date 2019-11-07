@@ -3,6 +3,7 @@
 
 # Lock Files
 yarn.lock
+package-lock.json
 
 # compiled output
 /dist
